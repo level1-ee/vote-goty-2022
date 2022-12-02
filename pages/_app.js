@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import { Inter } from "@next/font/google";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+const inter = Inter({
+  subsets: ["latin-ext"],
+  variable: "--font-inter",
+});
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <main className={`${inter.variable} font-sans`}>
+      <Component {...pageProps} />
+    </main>
+  );
 }
-
-export default MyApp
