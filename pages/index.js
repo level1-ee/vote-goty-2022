@@ -41,7 +41,7 @@ export default function Home() {
   };
 
   return (
-    <div className="max-w-md mx-auto pt-9">
+    <div className="max-w-sm mx-auto pt-9">
       <Head>
         <title>Level1.ee aasta mängu 2022 valimine</title>
       </Head>
@@ -79,7 +79,7 @@ export default function Home() {
               />
               {errors.name && (
                 <span className=" mt-2 block text-sm text-red-400">
-                  Kõik väljad on kohustuslikud
+                  See väli on kohustuslik
                 </span>
               )}
             </div>
@@ -99,7 +99,7 @@ export default function Home() {
               />
               {errors.email && (
                 <span className=" mt-2 block text-sm text-red-400">
-                  Kõik väljad on kohustuslikud
+                  See väli on kohustuslik
                 </span>
               )}
             </div>
@@ -144,7 +144,7 @@ export default function Home() {
               </select>
               {errors.goty && (
                 <span className=" mt-2 block text-sm text-red-400">
-                  Kõik väljad on kohustuslikud
+                  See väli on kohustuslik
                 </span>
               )}
             </div>
@@ -163,12 +163,24 @@ export default function Home() {
                 />
                 {errors.other && (
                   <span className=" mt-2 block text-sm text-red-400">
-                    Kõik väljad on kohustuslikud
+                    See väli on kohustuslik
                   </span>
                 )}
               </div>
             )}
+            <div>
+              <label className="form-label" htmlFor="miks">
+                Miks just see mäng?
+              </label>
 
+              <textarea
+                className="form-item"
+                id="miks"
+                {...register("why")}
+                cols="30"
+                rows="2"
+              />
+            </div>
             <input
               {...register("_gotcha")}
               type="checkbox"
