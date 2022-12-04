@@ -51,7 +51,7 @@ export default function Home() {
         openGraph={{
           images: [
             {
-              url: "https://goty.level1.ee/public/og.png",
+              url: "https://goty.level1.ee/og.png",
               width: 1200,
               height: 630,
               alt: "Level1.ee - 2022 aasta mängu valimine",
