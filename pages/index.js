@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { useFormspark } from "@formspark/use-formspark";
 import logo from "../public/level1-logo.svg";
 import gotyLogo from "../public/goty-logo.svg";
+import { NextSeo } from "next-seo";
 
 const FORMSPARK_FORM_ID = "9kXZImww";
 
@@ -43,10 +44,22 @@ export default function Home() {
 
   return (
     <div className="max-w-3xl mx-auto pt-9 px-8">
-      <Head>
-        <title>Level1.ee aasta mängu 2022 valimine</title>
-      </Head>
-
+      <NextSeo
+        title="2022 aasta mängu valimine - Level1.ee"
+        description="Milline oli sinu arvates 2022. aasta parim videomäng? Ära hoia seda enda teada, vaid jaga oma arvamust ka meiega ning võid võita ägedaid auhindu."
+        canonical="https://goty.level1.ee/"
+        openGraph={{
+          images: [
+            {
+              url: "https://goty.level1.ee/public/og.png",
+              width: 1200,
+              height: 630,
+              alt: "Level1.ee - 2022 aasta mängu valimine",
+              type: "image/png",
+            },
+          ],
+        }}
+      />
       {formIsVisible ? (
         <div className="flex gap-9 flex-col-reverse md:flex-row">
           <form className="flex-1" onSubmit={handleSubmit(onSubmit)}>
