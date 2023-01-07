@@ -4,7 +4,7 @@
 
 @layer components {
   .form-label {
-    @apply text-violet-300;
+    @apply text-green-300;
   }
 
   .form-item {
@@ -16,9 +16,9 @@
         w-full
         rounded-md
         border
-        border-violet-500
+        border-green-500
         shadow-sm
-        focus:border-violet-500 focus:ring focus:ring-violet-500 focus:ring-opacity-50;
+        focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50;
   }
 
   .form-item[aria-invalid="true"] {

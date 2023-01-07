@@ -17,8 +17,8 @@ export default function Home() {
     formState: { errors },
   } = useForm();
 
-  const [message, setMessage] = useState("Hääletus on lõppenud.");
-  const [formIsVisible, setFormIsVisible] = useState(false);
+  const [message, setMessage] = useState("");
+  const [formIsVisible, setFormIsVisible] = useState(true);
 
   const watchGotyList = watch("goty", false); // you can supply default value as second argument
 
@@ -60,9 +60,31 @@ export default function Home() {
           ],
         }}
       />
+
       {formIsVisible ? (
-        <div className="flex gap-9 flex-col-reverse md:flex-row">
-          <form className="flex-1" onSubmit={handleSubmit(onSubmit)}>
+        <div className="">
+          <div className="">
+            <a
+              href="https://level1.ee"
+              title="Mine Level1.ee"
+              target={"_blank"}
+              className=""
+            >
+              <Image
+                className=" max-w-[100px]"
+                src={logo}
+                alt="Level1.ee"
+                priority
+              />
+            </a>
+            <Image
+              className="mb-9"
+              src={gotyLogo}
+              alt="2022 aasta mängu valimine"
+              priority
+            />
+          </div>
+          <form className="" onSubmit={handleSubmit(onSubmit)}>
             <div className="grid grid-cols-1 gap-6">
               <div className="">
                 <label className="form-label" htmlFor="nimi">
@@ -199,36 +221,6 @@ export default function Home() {
               />
             </div>
           </form>
-          <div className="flex-1">
-            <a
-              href="https://level1.ee"
-              title="Mine Level1.ee"
-              target={"_blank"}
-              className=""
-            >
-              <Image
-                className=" max-w-[100px]"
-                src={logo}
-                alt="Level1.ee"
-                priority
-              />
-            </a>
-            <Image
-              className="mb-9"
-              src={gotyLogo}
-              alt="2022 aasta mängu valimine"
-              priority
-            />
-            <p className="text-green-200  leading-7 pl-[32px]">
-              Milline oli sinu arvates 2022. aasta parim videomäng? Ära hoia
-              seda enda teada, vaid jaga oma arvamust ka meiega ning võid võita
-              ägedaid auhindu:{" "}
-              <strong className="font-bold">
-                God of War Ragnarök Collector's Edition, Steelseries Arctics
-                Nova 1 kõrvaklapid ja Steelseries Apex 9 Mini klaviatuur.
-              </strong>
-            </p>
-          </div>
         </div>
       ) : (
         <div className="text-center text-2xl font-bold p-6 text-green-200">
