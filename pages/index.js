@@ -15,8 +15,8 @@ export default function Home() {
     formState: { errors },
   } = useForm();
 
-  const [message, setMessage] = useState("");
-  const [formIsVisible, setFormIsVisible] = useState(true);
+  const [message, setMessage] = useState("Hääletus on lõppenud.");
+  const [formIsVisible, setFormIsVisible] = useState(false);
 
   const watchGotyList = watch("goty", false); // you can supply default value as second argument
 
