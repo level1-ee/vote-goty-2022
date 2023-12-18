@@ -1,14 +1,8 @@
 import "../styles/globals.css";
-import { Inter } from "@next/font/google";
-
-const inter = Inter({
-  subsets: ["latin-ext"],
-  variable: "--font-inter",
-});
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <main className={`${inter.variable} font-sans`}>
+    <main>
       <Component {...pageProps} />
     </main>
   );

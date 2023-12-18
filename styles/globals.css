@@ -16,7 +16,7 @@
         w-full
         rounded-md
         border
-        border-green-500
+        border-green-400
         shadow-sm
         focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50;
   }
@@ -67,6 +67,6 @@
 
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-[#1E1E1E] text-white font-mono;
   }
 }

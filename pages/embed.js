@@ -7,7 +7,7 @@ import logo from "../public/level1-logo.svg";
 import gotyLogo from "../public/goty-logo.svg";
 import { NextSeo } from "next-seo";
 
-const FORMSPARK_FORM_ID = "9kXZImww";
+const FORMSPARK_FORM_ID = "K8SA04vLp";
 
 export default function Home() {
   const {
@@ -17,8 +17,8 @@ export default function Home() {
     formState: { errors },
   } = useForm();
 
-  const [message, setMessage] = useState("Hääletus on lõppenud.");
-  const [formIsVisible, setFormIsVisible] = useState(false);
+  const [message, setMessage] = useState("");
+  const [formIsVisible, setFormIsVisible] = useState(true);
 
   const watchGotyList = watch("goty", false); // you can supply default value as second argument
 
@@ -45,8 +45,8 @@ export default function Home() {
   return (
     <div className="max-w-3xl mx-auto pt-9 px-8">
       <NextSeo
-        title="2022 aasta mängu valimine - Level1.ee"
-        description="Milline oli sinu arvates 2022. aasta parim videomäng? Ära hoia seda enda teada, vaid jaga oma arvamust ka meiega ning võid võita ägedaid auhindu."
+        title="2023 aasta mängu valimine - Level1.ee"
+        description="Aastal 2023 ilmus meeletus koguses väga häid videomänge. Ent milline neist oli kõige parem? Jaga meiega oma tänavust lemmikmängu ning osale suures auhinnaloosis."
         canonical="https://goty.level1.ee/"
         openGraph={{
           images: [
@@ -54,7 +54,7 @@ export default function Home() {
               url: "https://goty.level1.ee/og.png",
               width: 1200,
               height: 630,
-              alt: "Level1.ee - 2022 aasta mängu valimine",
+              alt: "Level1.ee - 2023 aasta mängu valimine",
               type: "image/png",
             },
           ],
@@ -139,30 +139,22 @@ export default function Home() {
                   <option value="" disabled>
                     Vali...
                   </option>
-                  <option value="Horizon Forbidden West">
-                    Horizon Forbidden West
-                  </option>
-                  <option value="Elden Ring">Elden Ring</option>
-                  <option value="Gran Turismo 7">Gran Turismo 7</option>
-                  <option value="Kirby and the Forgotten Land">
-                    Kirby and the Forgotten Land
-                  </option>
-                  <option value="Tiny Tina's Wonderlands">
-                    Tiny Tina's Wonderlands
-                  </option>
-                  <option value="Teenage Mutant Ninja Turtles: Shredder's Revenge">
-                    Teenage Mutant Ninja Turtles: Shredder's Revenge
-                  </option>
-                  <option value="Stray">Stray</option>
-                  <option value="The Last of Us Part I">
-                    The Last of Us Part I
-                  </option>
-                  <option value="God of War Ragnarök">
-                    God of War Ragnarök
-                  </option>
-                  <option value="Call of Duty Warzone 2.0">
-                    Call of Duty Warzone 2.0
-                  </option>
+                  {[
+                    "Final Fantasy 16",
+                    "Marvel's Spider-Man 2",
+                    "Baldur's Gate 3",
+                    "Resident Evil 4",
+                    "Alan Wake II",
+                    "Diablo IV",
+                    "The Legend of Zelda: Tears of the Kingdom",
+                    "Hogwarts Legacy",
+                    "Starfield",
+                    "Super Mario Bros. Wonder",
+                  ].map((game) => (
+                    <option key={game} value={game}>
+                      {game}
+                    </option>
+                  ))}
                   <option value="other">Muu (soovita oma valikut)</option>
                 </select>
                 {errors.goty && (
