@@ -6,6 +6,8 @@ import { useFormspark } from "@formspark/use-formspark";
 import logo from "../public/level1-logo.svg";
 import gotyLogo from "../public/goty-logo.svg";
 import { NextSeo } from "next-seo";
+import arvutiTarkLogo from "../public/arvutitark-logo.svg";
+import psLogo from "../public/playstation-logo.svg";
 
 const FORMSPARK_FORM_ID = "K8SA04vLp";
 
@@ -216,6 +218,21 @@ export default function Home() {
           {message}
         </div>
       )}
+      <div className="flex items-center justify-center gap-12 border-t border-t-gray-700 mt-8 pt-6 pb-8">
+        <a
+          href="https://www.facebook.com/SonyPlayStationEesti/"
+          target="_blank"
+        >
+          <Image className="max-w-[40px]" src={psLogo} alt="PlayStation" />
+        </a>
+        <a href="https://arvutitark.ee/" target="_blank">
+          <Image
+            className="max-w-[120px]"
+            src={arvutiTarkLogo}
+            alt="Arvutitark"
+          />
+        </a>
+      </div>
     </div>
   );
 }
