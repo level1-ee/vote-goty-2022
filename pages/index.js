@@ -206,9 +206,10 @@ export default function Home() {
               lemmikmängu ning osale suures auhinnaloosis, mille raames jagame
               ära sellised auhinnad:{" "}
               <strong className="font-bold">
-                Razer Cobra Pro mäguri hiir, Logitech PRO X 2 juhtmevaba mänguri
-                peakomplekt, SteelSeries Arena 3 kõlarid, Horizon Forbidden West
-                Collector's Edition, God of War Ragnarök Collector's Edition,
+                Razer Cobra Pro mänguri hiir, Logitech PRO X 2 juhtmevaba
+                mänguri peakomplekt, SteelSeries Arena 3 kõlarid, Horizon
+                Forbidden West Collector's Edition, God of War Ragnarök
+                Collector's Edition,
               </strong>
             </p>
           </div>
